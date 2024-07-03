@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>articleWebsite</title>
+</head>
+<body>
+<h1>Index</h1>
+<div>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Category</th>
+                <th>Title</th>
+                <th>Content</th>
+                <th>Author</th>
+                <th>Date</th>
+                <th>Created At</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for article in articles %}
+                <tr>
+                    <td>{{ currency.id }}</td>
+                    <td>{{ currency.category }}</td>
+                    <td>{{ currency.title }}</td>
+                    <td>{{ currency.content }}</td>
+                    <td>{{ currency.author }}</td>
+                    <td>{{ currency.date }}</td>
+                    <td>{{ currency.created_at }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
