@@ -1,0 +1,16 @@
+{
+    "name": "ambax/article-website",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Ambax\\ArticleWebsite\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ambivalent-axiom",
+            "email": "artmelnis@gmail.com"
+        }
+    ],
+    "require": {}
+}
