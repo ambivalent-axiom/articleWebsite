@@ -1,14 +1,14 @@
 <?php
-namespace Ambax\articleWebsite\Services\RepositoryServices;
-use Ambax\articleWebsite\Repositories\Database;
-use Article;
-use Model;
+namespace Ambax\ArticleWebsite\Services\RepositoryServices;
+use Ambax\ArticleWebsite\Models\Article;
+use Ambax\ArticleWebsite\Models\Model;
+use Ambax\ArticleWebsite\Repositories\Database;
 
 class ArticleRepositoryService implements RepositoryService
 {
     public function __construct(Database $db)
     {
-        $this->db = $db;
+        $this->db = $db->set();
     }
     public function fetchOne(string $id)
     {

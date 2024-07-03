@@ -1,6 +1,6 @@
 <?php
-namespace Ambax\articleWebsite\Services\RepositoryServices;
-use Model;
+namespace Ambax\ArticleWebsite\Services\RepositoryServices;
+use Ambax\ArticleWebsite\Models\Model;
 
 interface RepositoryService
 {

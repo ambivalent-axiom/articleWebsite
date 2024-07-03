@@ -1,5 +1,5 @@
 <?php
-namespace Ambax\articleWebsite;
+namespace Ambax\ArticleWebsite;
 class Response
 {
     private array $data;

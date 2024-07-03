@@ -1,7 +1,6 @@
 <?php
-namespace Ambax\articleWebsite\Repositories;
+namespace Ambax\ArticleWebsite\Repositories;
 use Medoo\Medoo;
-
 class SQLite implements Database
 {
     public const DB_DIR = "storage/";
@@ -10,7 +9,7 @@ class SQLite implements Database
         return new Medoo(
             [
                 'type' => 'sqlite',
-                'database' => '/storage/db.sqlite'
+                'database' => 'storage/db.sqlite'
             ]
         );
     }

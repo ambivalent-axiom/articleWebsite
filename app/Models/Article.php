@@ -1,4 +1,5 @@
 <?php
+namespace Ambax\ArticleWebsite\Models;
 class Article implements Model
 {
     private string $id;
@@ -36,6 +37,30 @@ class Article implements Model
             'article_author' => $this->author,
             'article_date' => $this->date
         ];
+    }
+    public function getId()
+    {
+        return $this->id;
+    }
+    public function getCategory()
+    {
+        return $this->category;
+    }
+    public function getTitle()
+    {
+        return $this->title;
+    }
+    public function getContent()
+    {
+        return $this->content;
+    }
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+    public function getDate()
+    {
+        return $this->date;
     }
     public function getCreatedAt(): string
     {

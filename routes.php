@@ -1,4 +1,5 @@
 <?php
+namespace Ambax\ArticleWebsite;
 return [
-    ['GET', '/', [Ambax\articleWebsite\Controllers\ArticleController::class, 'index']],
+    ['GET', '/', [Controllers\ArticleController::class, 'index']],
 ];

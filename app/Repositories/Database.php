@@ -1,5 +1,5 @@
 <?php
-namespace Ambax\articleWebsite\Repositories;
+namespace Ambax\ArticleWebsite\Repositories;
 interface Database
 {
     public function set();
