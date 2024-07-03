@@ -4,7 +4,7 @@ use Ambax\ArticleWebsite\Response;
 use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
 use Psr\Log\LoggerInterface;
 
-class ArticleController
+class ArticleIndex
 {
     public function __construct(LoggerInterface $logger, ArticleRepositoryService $repository)
     {
@@ -13,7 +13,6 @@ class ArticleController
     }
     public function index(): Response
     {
-        $this->logger->info(__METHOD__ . ' index start');
         return new Response(
             ['articles' => $this->repository->fetchAll()],
             'index'

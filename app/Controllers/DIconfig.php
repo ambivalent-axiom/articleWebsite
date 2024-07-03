@@ -23,6 +23,7 @@ return function()
         Database::class => create(SQLite::class),
         ArticleRepositoryService::class =>
             create(ArticleRepositoryService::class)->constructor(
+                get(LoggerInterface::class),
                 get(Database::class)
         ),
     ]);

@@ -7,24 +7,22 @@ class Article implements Model
     private string $title;
     private string $content;
     private string $author;
-    private string $date;
     private string $created_at;
 
     public function __construct(
         string $id,
-        string $category,
+        int $category,
         string $title,
         string $content,
         string $author,
-        string $date,
-        string $created_at)
+        string $created_at
+    )
     {
         $this->id = $id;
         $this->category = $category;
         $this->title = $title;
         $this->content = $content;
         $this->author = $author;
-        $this->date = $date;
         $this->created_at = $created_at;
     }
     public function __invoke()
@@ -35,32 +33,28 @@ class Article implements Model
             'article_title' => $this->title,
             'article_content' => $this->content,
             'article_author' => $this->author,
-            'article_date' => $this->date
+            'article_created_at' => $this->created_at
         ];
     }
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
-    public function getCategory()
+    public function getCategory(): int
     {
         return $this->category;
     }
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
-    public function getContent()
+    public function getContent(): string
     {
         return $this->content;
     }
-    public function getAuthor()
+    public function getAuthor(): string
     {
         return $this->author;
-    }
-    public function getDate()
-    {
-        return $this->date;
     }
     public function getCreatedAt(): string
     {

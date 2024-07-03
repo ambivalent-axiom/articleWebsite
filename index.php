@@ -1,12 +1,17 @@
 <?php
 require 'vendor/autoload.php';
+
+use Ambax\ArticleWebsite\Response;
+use Ambax\ArticleWebsite\RedirectResponse;
 use Twig\Environment;
+use Twig\Extension\CoreExtension;
 use Twig\Loader\FilesystemLoader;
-$container = (require 'app/Controllers/ControllerDIconfig.php')();
+$container = (require 'app/Controllers/DIconfig.php')();
 $loader = new FilesystemLoader(__DIR__ . '/templates');
 $twig = new Environment($loader, [
     'cache' => false,
 ]);
+$twig->getExtension(CoreExtension::class)->setTimezone("Europe/Riga");
 $dispatcher = FastRoute\SimpleDispatcher(function (FastRoute\RouteCollector $r) {
     $routes = (require 'routes.php');
     foreach ($routes as $route) {
@@ -33,9 +38,18 @@ switch ($case) {
     case FastRoute\Dispatcher::FOUND:
         [$controller, $route] = $handler;
         $items = ($container->get($controller))->$route(...array_values($vars));
-        echo $twig->render(
-            $items->getAddress() . '.twig',
-            $items->getData()
-        );
+
+        if ($items instanceof Response) {
+            echo $twig->render(
+                $items->getAddress() . '.twig',
+                $items->getData()
+            );
+        }
+        if ($items instanceof RedirectResponse) {
+            echo $twig->render(
+                $items->getAddress() . '.twig',
+                $items->getMessage()
+            );
+        }
         break;
 }

@@ -3,12 +3,15 @@ namespace Ambax\ArticleWebsite\Services\RepositoryServices;
 use Ambax\ArticleWebsite\Models\Article;
 use Ambax\ArticleWebsite\Models\Model;
 use Ambax\ArticleWebsite\Repositories\Database;
+use PDOException;
+use Psr\Log\LoggerInterface;
 
 class ArticleRepositoryService implements RepositoryService
 {
-    public function __construct(Database $db)
+    public function __construct(LoggerInterface $logger, Database $db)
     {
         $this->db = $db->set();
+        $this->logger = $logger;
     }
     public function fetchOne(string $id)
     {
@@ -24,21 +27,35 @@ class ArticleRepositoryService implements RepositoryService
                 $article['article_title'],
                 $article['article_content'],
                 $article['article_author'],
-                $article['article_date'],
-                $article['article_created_at'],
+                $article['article_created_at']
             );
         }
         return $articles;
     }
-    public function delete(string $id)
+    public function delete(string $id): bool
     {
-        // TODO: Implement delete() method.
+        try {
+            $this->db->delete('articles', ['article_id' => $id]);
+            $this->logger->info(__METHOD__ . " article " . $id . " deleted");
+            return true;
+        } catch (PDOException $e) {
+            $this->logger->info(__METHOD__ . $e->getMessage());
+            return false;
+        }
+
     }
-    public function create(Model $article): void
+    public function create(Model $article): bool
     {
-        $this->db->insert('articles', $article());
+        try {
+            $this->db->insert('articles', $article());
+            $this->logger->info(__METHOD__ . " article created");
+            return true;
+        } catch (PDOException $e) {
+            $this->logger->info(__METHOD__ . $e->getMessage());
+            return false;
+        }
     }
-    public function update(array $data)
+    public function update(Model $article): bool
     {
         // TODO: Implement update() method.
     }
