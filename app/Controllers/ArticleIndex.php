@@ -13,6 +13,7 @@ class ArticleIndex
     }
     public function index(): Response
     {
+        $this->logger->info(__METHOD__ . ' index started');
         return new Response(
             ['articles' => $this->repository->fetchAll()],
             'index'

@@ -15,7 +15,7 @@ class ArticleRepositoryService implements RepositoryService
     }
     public function fetchOne(string $id): Article
     {
-        $this->logger->info('Fetching article by ID: ' . $id);
+        $this->logger->info(__METHOD__ . 'Fetching article by ID: ' . $id);
         $articles = $this->db->select('articles', '*', ['article_id' => $id]);
         foreach ($articles as $article) {
             return new Article(
@@ -30,6 +30,7 @@ class ArticleRepositoryService implements RepositoryService
     }
     public function fetchAll(): array
     {
+        $this->logger->info(__METHOD__ . 'Fetching articles...');
         $articles = [];
         foreach ($this->db->select('articles', '*') as $article) {
             $articles[] = new Article(
