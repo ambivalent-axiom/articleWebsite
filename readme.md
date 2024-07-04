@@ -28,9 +28,9 @@ Logging options should be implemented using https://github.com/Seldaek/monolog
 Dependency injection usage is MUST - https://php-di.org/
 
 Setup:
-git clone https://github.com/ambivalent-axiom/articleWebsite.git
-composer install
-php -S localhost:8000
-Open localhost:8000 in web browser.
+```git clone https://github.com/ambivalent-axiom/articleWebsite.git```
+```composer install```
+```php -S localhost:8000```
+- Open localhost:8000 in web browser.
 
 -- END OF readme.md --
