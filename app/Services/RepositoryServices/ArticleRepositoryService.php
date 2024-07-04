@@ -32,7 +32,8 @@ class ArticleRepositoryService implements RepositoryService
     {
         $this->logger->info(__METHOD__ . 'Fetching articles...');
         $articles = [];
-        foreach ($this->db->select('articles', '*') as $article) {
+        foreach ($this->db->select('articles', '*', [
+        'ORDER' => ['article_created_at' => 'DESC']]) as $article) {
             $articles[] = new Article(
                 $article['article_id'],
                 $article['article_category'],
