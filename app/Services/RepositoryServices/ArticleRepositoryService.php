@@ -13,9 +13,20 @@ class ArticleRepositoryService implements RepositoryService
         $this->db = $db->set();
         $this->logger = $logger;
     }
-    public function fetchOne(string $id)
+    public function fetchOne(string $id): Article
     {
-        // TODO: Implement fetchOne() method.
+        $this->logger->info('Fetching article by ID: ' . $id);
+        $articles = $this->db->select('articles', '*', ['article_id' => $id]);
+        foreach ($articles as $article) {
+            return new Article(
+                $article['article_id'],
+                $article['article_category'],
+                $article['article_title'],
+                $article['article_content'],
+                $article['article_author'],
+                $article['article_created_at']
+            );
+        }
     }
     public function fetchAll(): array
     {
@@ -57,6 +68,13 @@ class ArticleRepositoryService implements RepositoryService
     }
     public function update(Model $article): bool
     {
-        // TODO: Implement update() method.
+        try {
+            $this->db->update('articles', $article(), ['article_id' => $article->getId()]);
+            $this->logger->info(__METHOD__ . " article updated");
+            return true;
+        } catch (PDOException $e) {
+            $this->logger->info(__METHOD__ . $e->getMessage());
+            return false;
+        }
     }
 }

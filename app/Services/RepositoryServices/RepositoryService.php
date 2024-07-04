@@ -9,5 +9,4 @@ interface RepositoryService
     public function create(Model $data);
     public function update(Model $data);
     public function delete(string $id);
-
 }
