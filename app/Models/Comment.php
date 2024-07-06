@@ -14,9 +14,9 @@ class Comment implements Model
     public function __construct(
         string $id,
         string $articleId,
+        string $author,
         string $email,
         string $content,
-        string $author,
         string $created_at,
         string $status='approved',
         int $likes=0
@@ -24,9 +24,9 @@ class Comment implements Model
     {
         $this->id = $id;
         $this->articleId = $articleId;
+        $this->author = $author;
         $this->email = $email;
         $this->content = $content;
-        $this->author = $author;
         $this->created_at = $created_at;
         $this->status = $status;
         $this->likes = $likes;

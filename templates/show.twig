@@ -41,6 +41,20 @@
                         </button>
                     </form>
                 </div>
+                {% if comments %}
+                    <div class="m-2">
+                        <h2 class="text-2xl font-bold mb-4">Comments</h2>
+                        {% for comment in comments %}
+                            <div class="m-2 p-6 bg-slate-400 rounded-md shadow-2xl">
+                                <p class="italic text-sm">By: {{ comment.author }}</p>
+                                <p class="italic text-sm">Posted on: {{ comment.createdAt | date }}</p>
+                                <div class="m-1 p-2 bg-slate-300 rounded-md shadow-2xl">
+                                    <p>{{ comment.content }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
     </div>
 </div>

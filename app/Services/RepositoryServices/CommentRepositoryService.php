@@ -16,7 +16,7 @@ class CommentRepositoryService implements RepositoryService
     public function fetchOne(string $articleId): array
     {
         $this->logger->info(__METHOD__ . 'Fetching comment by article ID: ' . $articleId);
-        $content = $this->db->select('comments', '*', ['comment_id' => $articleId]);
+        $content = $this->db->select('comments', '*', ['comment_article_id' => $articleId]);
         $articleComments = [];
         foreach ($content as $comment) {
             $articleComments[] = new Comment(
