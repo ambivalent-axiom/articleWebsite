@@ -1,5 +1,5 @@
-{% include 'header.twig' %}
-{% include 'menu.twig' %}
+{% include 'includes/header.twig' %}
+{% include 'includes/menu.twig' %}
 <body class="bg-gray-500">
 <div>
     <div class="p-4">
@@ -8,71 +8,10 @@
                 <div>
                 </div>
                 <div class="m-2 p-6 bg-slate-400 rounded-md shadow-2xl">
-                    <h2 class="text-2xl font-bold mb-4">{{ article.title }}</h2>
-                    <p class="italic text-sm">By: {{ article.author }}</p>
-                    <p class="italic text-sm">Posted on: {{ article.createdAt }}</p>
-                    <p class="italic text-sm">Likes: {{ article.likes }}</p>
-                    <div class="m-1 p-2 bg-slate-300 rounded-md shadow-2xl whitespace-break-spaces max-w-2xl">
-                        <p>{{ article.content }}</p>
-                    </div>
-                    <div class="flex">
-                        <a href="/article/like/{{ article.id }}">
-                            <div class="p-1 mt-3 m-1 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">Like</div>
-                        </a>
-                    </div>
-                    <div class="m-2">
-                        <h2 class="text-2xl font-bold mb-4">Add Comment</h2>
-                        <form action="" method="post" enctype="multipart/form-data">
-                            <label for="articleId" class="p-2">Article ID:
-                                <input class="bg-slate-400 w-80" type="email" name="articleId" value="{{ article.id }}" readonly>
-                            </label>
-                            <div class="flex flex-row">
-                                <div class="p-2">
-                                    <label for="author">Name:
-                                        <input class="rounded-md" type="text" name="author">
-                                    </label>
-                                </div>
-                                <div class="p-2">
-                                    <label for="email">Email:
-                                        <input class="rounded-md" type="email" name="email">
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="container  px-4">
-                                <label for="content">
-                                    <textarea class="rounded-md" name="content" cols="59" rows="5"></textarea>
-                                </label>
-                            </div>
-                            <button name="create_post" value="Add">
-                                <div class="p-1 mt-3 m-5 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">
-                                    Add
-                                </div>
-                            </button>
-                        </form>
-                    </div>
+                    {% include 'includes/article.twig' %}
+                    {% include 'includes/add_comment.twig' %}
                     {% if comments %}
-                        <div class="m-2">
-                            <h2 class="text-2xl font-bold mb-4">Comments</h2>
-                            {% for comment in comments %}
-                                <div class="m-2 p-6 bg-slate-400 rounded-md shadow-2xl">
-                                    <p class="italic text-sm">By: {{ comment.author }}</p>
-                                    <p class="italic text-sm">Posted on: {{ comment.createdAt | date }}</p>
-                                    <p class="italic text-sm">Likes: {{ comment.likes }}</p>
-                                    <div class="m-1 p-2 bg-slate-300 rounded-md shadow-2xl">
-                                        <p>{{ comment.content }}</p>
-                                    </div>
-                                    <div class="flex">
-                                        <a href="/comment/like/{{ comment.id }}?article={{ article.id }}">
-                                            <div class="p-1 mt-3 m-1 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">Like</div>
-                                        </a>
-                                        <a href="/comment/delete/{{ comment.id }}?article={{ article.id }}">
-                                            <div class="p-1 mt-3 m-1 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">Delete</div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                            {% endfor %}
-                        </div>
+                        {%  include 'includes/comments.twig' %}
                     {% endif %}
                 </div>
                 <div>
@@ -82,4 +21,4 @@
     </div>
 </div>
 </body>
-{% include 'footer.twig' %}
+{% include 'includes/footer.twig' %}

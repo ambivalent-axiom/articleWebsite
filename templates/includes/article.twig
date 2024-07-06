@@ -1,0 +1,12 @@
+<h2 class="text-2xl font-bold mb-4">{{ article.title }}</h2>
+<p class="italic text-sm">By: {{ article.author }}</p>
+<p class="italic text-sm">Posted on: {{ article.createdAt }}</p>
+<p class="italic text-sm">Likes: {{ article.likes }}</p>
+<div class="m-1 p-2 bg-slate-300 rounded-md shadow-2xl whitespace-break-spaces max-w-2xl">
+    <p>{{ article.content }}</p>
+</div>
+<div class="flex">
+    <a href="/article/like/{{ article.id }}">
+        <div class="p-1 mt-3 m-1 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">Like</div>
+    </a>
+</div>

@@ -1,0 +1,21 @@
+{% for article in articles %}
+    <div class="m-2 p-6 bg-slate-400 rounded-md shadow-2xl">
+        <h2 class="text-2xl font-bold mb-4">{{ article.title }}</h2>
+        <p class="italic text-sm">By: {{ article.author }}</p>
+        <p class="italic text-sm">Posted on: {{ article.createdAt | date }}</p>
+        <div class="m-1 p-2 bg-slate-300 rounded-md shadow-2xl">
+            <p>{{ article.content | slice(0, 91) }}...</p>
+        </div>
+        <div class="flex">
+            <a href="/show/{{ article.id }}">
+                <div class="p-1 mt-3 m-1 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">Read More</div>
+            </a>
+            <a href="/update/{{ article.id }}">
+                <div class="p-1 mt-3 m-1 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">Edit</div>
+            </a>
+            <a href="/delete/{{ article.id }}">
+                <div class="p-1 mt-3 m-1 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">Delete</div>
+            </a>
+        </div>
+    </div>
+{% endfor %}
