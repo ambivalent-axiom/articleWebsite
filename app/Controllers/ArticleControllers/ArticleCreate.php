@@ -3,14 +3,14 @@ namespace Ambax\ArticleWebsite\Controllers\ArticleControllers;
 use Ambax\ArticleWebsite\Models\Article;
 use Ambax\ArticleWebsite\RedirectResponse;
 use Ambax\ArticleWebsite\Response;
-use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
+use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices;
 use Carbon\Carbon;
 use Psr\Log\LoggerInterface;
 use Ramsey\Uuid\Uuid;
 
 class ArticleCreate
 {
-    public function __construct(LoggerInterface $logger, ArticleRepositoryService $repository)
+    public function __construct(LoggerInterface $logger, ArticleRepositoryServices $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;

@@ -8,6 +8,7 @@ class Article implements Model
     private string $content;
     private string $author;
     private string $created_at;
+    private string $likes;
 
     public function __construct(
         string $id,
@@ -15,7 +16,8 @@ class Article implements Model
         string $title,
         string $content,
         string $author,
-        string $created_at
+        string $created_at,
+        int $likes=0
     )
     {
         $this->id = $id;
@@ -24,6 +26,7 @@ class Article implements Model
         $this->content = $content;
         $this->author = $author;
         $this->created_at = $created_at;
+        $this->likes = $likes;
     }
     public function __invoke()
     {
@@ -33,7 +36,8 @@ class Article implements Model
             'article_title' => $this->title,
             'article_content' => $this->content,
             'article_author' => $this->author,
-            'article_created_at' => $this->created_at
+            'article_created_at' => $this->created_at,
+            'article_likes' => $this->likes,
         ];
     }
     public function getId(): string
@@ -59,5 +63,13 @@ class Article implements Model
     public function getCreatedAt(): string
     {
         return $this->created_at;
+    }
+    public function getLikes(): int
+    {
+        return $this->likes;
+    }
+    public function like()
+    {
+        $this->likes++;
     }
 }

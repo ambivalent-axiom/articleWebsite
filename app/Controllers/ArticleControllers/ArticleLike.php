@@ -5,17 +5,19 @@ use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices;
 use Psr\Log\LoggerInterface;
 
 
-class ArticleDelete
+class ArticleLike
 {
     public function __construct(LoggerInterface $logger, ArticleRepositoryServices $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;
     }
-    public function delete(string $id): RedirectResponse
+    public function like(string $id): RedirectResponse
     {
-        $this->logger->info(__METHOD__ . ' article ' . $id . ' deleted');
-        $this->repository->delete($id);
-        return new RedirectResponse('/notify', 'Article deleted successfully', '/');
+        $article = $this->repository->fetchOne($id);
+        $article->like();
+        $this->logger->info(__METHOD__ . ' article ' . $id . ' liked');
+        $this->repository->update($article);
+        return new RedirectResponse('/redirect', '', '/show/' . $id);
     }
 }

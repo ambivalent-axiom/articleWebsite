@@ -2,14 +2,14 @@
 namespace Ambax\ArticleWebsite\Controllers\CommentControllers;
 use Ambax\ArticleWebsite\Models\Comment;
 use Ambax\ArticleWebsite\RedirectResponse;
-use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryService;
+use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices;
 use Carbon\Carbon;
 use Psr\Log\LoggerInterface;
 use Ramsey\Uuid\Uuid;
 
 class CommentCreate
 {
-    public function __construct(LoggerInterface $logger, CommentRepositoryService $repository)
+    public function __construct(LoggerInterface $logger, CommentRepositoryServices $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;

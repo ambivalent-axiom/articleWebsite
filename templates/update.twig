@@ -4,44 +4,54 @@
 <div>
     <div class="p-4">
         <h1 class="text-4xl font-bold mb-4 text-center">Update Article</h1>
-        <div class="m-2 p-6 bg-slate-400 rounded-md flex">
-            <form action="\update" method="post" enctype="multipart/form-data">
-                <div class="flex flex-col">
-                    <div class="p-2 text-end">
-                        <label for="id">Article ID:
-                            <input class="rounded-md" type="text" name="id" value="{{ article.id }}" readonly>
+        <div class="grid grid-flow-col auto-cols-max justify-center">
+            <div>
+            </div>
+            <div class="m-2 p-6 bg-slate-400 rounded-md flex">
+                <form action="\update" method="post" enctype="multipart/form-data">
+                    <div class="flex flex-col">
+                        <div class="p-2 text-start">
+                            <label for="id">Article ID:
+                                <input class="rounded-md bg-slate-400 w-80" type="text" name="id" value="{{ article.id }}" readonly>
+                            </label>
+                        </div>
+                        <div class="p-2 text-start">
+                            <label for="timestamp">Created at:
+                                <input class="rounded-md bg-slate-400 w-80" type="text" name="timestamp" value="{{ article.createdAt }}" readonly>
+                            </label>
+                        </div>
+
+                        <div class="flex">
+                            <div class="p-2 text-end">
+                                <label for="title">Article Title:
+                                    <input class="rounded-md w-30" type="text" name="title" value="{{ article.title }}">
+                                </label>
+                            </div>
+                            <div class="p-2 text-end">
+                                <label for="author">Author:
+                                    <input class="rounded-md w-20" type="text" name="author" value="{{ article.author }}">
+                                </label>
+                            </div>
+                            <div class="p-2 text-end">
+                                <label for="category">Category:
+                                    <input class="rounded-md w-20" type="number" id="category" name="category" value="{{ article.category }}">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mx-auto px-4">
+                        <label for="content">
+                            <textarea class="rounded-md" name="content" cols="80" rows="10">{{ article.content }}</textarea>
                         </label>
                     </div>
-                    <div class="p-2 text-end">
-                        <label for="timestamp">Created at:
-                            <input class="rounded-md" type="text" name="timestamp" value="{{ article.createdAt }}" readonly>
-                        </label>
-                    </div>
-                    <div class="p-2 text-end">
-                        <label for="title">Article Title:
-                            <input class="rounded-md" type="text" name="title" value="{{ article.title }}">
-                        </label>
-                    </div>
-                    <div class="p-2 text-end">
-                        <label for="author">Author:
-                            <input class="rounded-md" type="text" name="author" value="{{ article.author }}">
-                        </label>
-                    </div>
-                    <div class="p-2 text-end">
-                        <label for="category">Category:
-                            <input class="rounded-md" type="number" id="category" name="category" value="{{ article.category }}">
-                        </label>
-                    </div>
-                </div>
-                <div class="container mx-auto px-4">
-                    <label for="content">
-                        <textarea class="rounded-md" name="content" cols="35" rows="10">{{ article.content }}</textarea>
-                    </label>
-                </div>
-                <div class="p-1 mt-3 m-1 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">
-                    <input class="btn" type="submit" name="update_post" value="Update">
-                </div>
-            </form>
+                    <button name="update_post" value="Update">
+                        <div class="p-1 mt-3 m-1 bg-slate-500 hover:bg-slate-300 rounded-md shadow-2xl w-28 text-center">
+                            Update
+                        </div>
+                    </button>
+                </form>
+            </div>
+            <div></div>
         </div>
     </div>
 </div>

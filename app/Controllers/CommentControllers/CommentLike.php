@@ -5,18 +5,20 @@ use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices;
 use Psr\Log\LoggerInterface;
 
 
-class CommentDelete
+class CommentLike
 {
     public function __construct(LoggerInterface $logger, CommentRepositoryServices $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;
     }
-    public function delete(string $id): RedirectResponse
+    public function like(string $id): RedirectResponse
     {
         $articleId = $_GET['article'];
+        $comment = $this->repository->fetchOne($id);
+        $comment->like();
         $this->logger->info(__METHOD__ . ' comment ' . $id . ' deleted');
-        $this->repository->delete($id);
-        return new RedirectResponse('/notify', 'Comment deleted successfully', '/show/' . $articleId);
+        $this->repository->update($comment);
+        return new RedirectResponse('/redirect', '', '/show/' . $articleId);
     }
 }

@@ -1,12 +1,12 @@
 <?php
 namespace Ambax\ArticleWebsite\Controllers\CommentControllers;
 use Ambax\ArticleWebsite\Response;
-use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryService;
+use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices;
 use Psr\Log\LoggerInterface;
 
 class CommentIndex
 {
-    public function __construct(LoggerInterface $logger, CommentRepositoryService $repository)
+    public function __construct(LoggerInterface $logger, CommentRepositoryServices $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;

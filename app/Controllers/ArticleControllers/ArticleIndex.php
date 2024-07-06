@@ -1,12 +1,12 @@
 <?php
 namespace Ambax\ArticleWebsite\Controllers\ArticleControllers;
 use Ambax\ArticleWebsite\Response;
-use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
+use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices;
 use Psr\Log\LoggerInterface;
 
 class ArticleIndex
 {
-    public function __construct(LoggerInterface $logger, ArticleRepositoryService $repository)
+    public function __construct(LoggerInterface $logger, ArticleRepositoryServices $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;
