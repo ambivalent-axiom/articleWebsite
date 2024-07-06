@@ -1,24 +1,22 @@
 <?php
-namespace Ambax\ArticleWebsite\Controllers;
+namespace Ambax\ArticleWebsite\Controllers\ArticleControllers;
 use Ambax\ArticleWebsite\Response;
 use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
 use Psr\Log\LoggerInterface;
 
-
-class ArticleShow
+class ArticleIndex
 {
     public function __construct(LoggerInterface $logger, ArticleRepositoryService $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;
     }
-
-    public function show(string $id): Response
+    public function index(): Response
     {
-        $this->logger->info(__METHOD__ . ' show one article start');
+        $this->logger->info(__METHOD__ . ' index started');
         return new Response(
-            ['article' => $this->repository->fetchOne($id)],
-            'show'
+            ['articles' => $this->repository->fetchAll()],
+            'index'
         );
     }
 }

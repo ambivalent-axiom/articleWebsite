@@ -3,6 +3,7 @@ namespace Ambax\ArticleWebsite;
 use Ambax\ArticleWebsite\Repositories\Database;
 use Ambax\ArticleWebsite\Repositories\SQLite;
 use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
+use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryService;
 use DI\ContainerBuilder;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
@@ -26,6 +27,11 @@ return function()
                 get(LoggerInterface::class),
                 get(Database::class)
         ),
+        CommentRepositoryService::class => create(
+            CommentRepositoryService::class)->constructor(
+                get(LoggerInterface::class),
+                get(Database::class)
+        )
     ]);
     return $containerBuilder->build();
 };

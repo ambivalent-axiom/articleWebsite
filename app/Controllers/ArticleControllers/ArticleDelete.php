@@ -1,8 +1,7 @@
 <?php
-namespace Ambax\ArticleWebsite\Controllers;
-use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
+namespace Ambax\ArticleWebsite\Controllers\ArticleControllers;
 use Ambax\ArticleWebsite\RedirectResponse;
-
+use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
 use Psr\Log\LoggerInterface;
 
 

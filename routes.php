@@ -1,11 +1,11 @@
 <?php
 namespace Ambax\ArticleWebsite;
 return [
-    ['GET', '/', [Controllers\ArticleIndex::class, 'index']],
-    ['GET', '/create', [Controllers\ArticleCreate::class, 'index']],
-    ['GET', '/show/{id}', [Controllers\ArticleShow::class, 'show']],
-    ['GET', '/delete/{id}', [Controllers\ArticleDelete::class, 'delete']],
-    ['GET', '/update/{id}', [Controllers\ArticleUpdate::class, 'index']],
-    ['POST', '/update', [Controllers\ArticleUpdate::class, 'update']],
-    ['POST', '/create', [Controllers\ArticleCreate::class, 'create']],
+    ['GET', '/', [Controllers\ArticleControllers\ArticleIndex::class, 'index']],
+    ['GET', '/create', [Controllers\ArticleControllers\ArticleCreate::class, 'index']],
+    ['GET', '/show/{id}', [Controllers\ArticleControllers\ArticleShow::class, 'show']],
+    ['GET', '/delete/{id}', [Controllers\ArticleControllers\ArticleDelete::class, 'delete']],
+    ['GET', '/update/{id}', [Controllers\ArticleControllers\ArticleUpdate::class, 'index']],
+    ['POST', '/update', [Controllers\ArticleControllers\ArticleUpdate::class, 'update']],
+    ['POST', '/create', [Controllers\ArticleControllers\ArticleCreate::class, 'create']],
 ];

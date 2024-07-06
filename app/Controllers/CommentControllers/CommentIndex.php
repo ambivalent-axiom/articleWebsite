@@ -1,12 +1,12 @@
 <?php
-namespace Ambax\ArticleWebsite\Controllers;
+namespace Ambax\ArticleWebsite\Controllers\CommentControllers;
 use Ambax\ArticleWebsite\Response;
-use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
+use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryService;
 use Psr\Log\LoggerInterface;
 
-class ArticleIndex
+class CommentIndex
 {
-    public function __construct(LoggerInterface $logger, ArticleRepositoryService $repository)
+    public function __construct(LoggerInterface $logger, CommentRepositoryService $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;
@@ -15,7 +15,7 @@ class ArticleIndex
     {
         $this->logger->info(__METHOD__ . ' index started');
         return new Response(
-            ['articles' => $this->repository->fetchAll()],
+            ['comments' => $this->repository->fetchAll()],
             'index'
         );
     }

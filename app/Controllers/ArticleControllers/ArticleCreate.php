@@ -1,9 +1,9 @@
 <?php
-namespace Ambax\ArticleWebsite\Controllers;
+namespace Ambax\ArticleWebsite\Controllers\ArticleControllers;
 use Ambax\ArticleWebsite\Models\Article;
+use Ambax\ArticleWebsite\RedirectResponse;
 use Ambax\ArticleWebsite\Response;
 use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
-use Ambax\ArticleWebsite\RedirectResponse;
 use Carbon\Carbon;
 use Psr\Log\LoggerInterface;
 use Ramsey\Uuid\Uuid;
