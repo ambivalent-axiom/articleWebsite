@@ -66,7 +66,7 @@ class CommentRepositoryService implements RepositoryService
     public function create(Model $comment): bool
     {
         try {
-            $this->db->insert('articles', $comment());
+            $this->db->insert('comments', $comment());
             $this->logger->info(__METHOD__ . " comment created");
             return true;
         } catch (PDOException $e) {

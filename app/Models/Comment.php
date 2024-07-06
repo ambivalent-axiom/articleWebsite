@@ -3,7 +3,7 @@ namespace Ambax\ArticleWebsite\Models;
 class Comment implements Model
 {
     private string $id;
-    private string $postId;
+    private string $articleId;
     private string $email;
     private string $content;
     private string $author;
@@ -13,7 +13,7 @@ class Comment implements Model
 
     public function __construct(
         string $id,
-        string $postId,
+        string $articleId,
         string $email,
         string $content,
         string $author,
@@ -23,7 +23,7 @@ class Comment implements Model
     )
     {
         $this->id = $id;
-        $this->postId = $postId;
+        $this->articleId = $articleId;
         $this->email = $email;
         $this->content = $content;
         $this->author = $author;
@@ -34,23 +34,23 @@ class Comment implements Model
     public function __invoke()
     {
         return [
-            'article_id' => $this->id,
-            'post_id' => $this->postId,
-            'email' => $this->email,
-            'article_content' => $this->content,
-            'article_author' => $this->author,
-            'article_created_at' => $this->created_at,
-            'article_status' => $this->status,
-            'article_likes' => $this->likes,
+            'comment_id' => $this->id,
+            'comment_article_id' => $this->articleId,
+            'comment_author' => $this->author,
+            'comment_email' => $this->email,
+            'comment_content' => $this->content,
+            'comment_timestamp' => $this->created_at,
+            'comment_status' => $this->status,
+            'comment_likes' => $this->likes,
         ];
     }
     public function getId(): string
     {
         return $this->id;
     }
-    public function getPostId(): string
+    public function getArticleId(): string
     {
-        return $this->postId;
+        return $this->articleId;
     }
     public function getEmail(): string
     {

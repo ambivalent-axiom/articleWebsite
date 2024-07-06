@@ -19,13 +19,13 @@ class CommentCreate
         $this->logger->info(__METHOD__ . ' create start');
         $comment = new Comment(
             Uuid::uuid4()->toString(),
-            $_POST['article_id'],
+            $_POST['articleId'],
             $_POST['author'],
             $_POST['email'],
             $_POST['content'],
             Carbon::now()->toDateTimeString()
         );
         $this->repository->create($comment);
-        return new RedirectResponse('/notify', 'Comment created successfully', '/');
+        return new RedirectResponse('/notify', 'Comment added successfully', '/show/' . $_POST['articleId']);
     }
 }

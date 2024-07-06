@@ -8,4 +8,5 @@ return [
     ['GET', '/update/{id}', [Controllers\ArticleControllers\ArticleUpdate::class, 'index']],
     ['POST', '/update', [Controllers\ArticleControllers\ArticleUpdate::class, 'update']],
     ['POST', '/create', [Controllers\ArticleControllers\ArticleCreate::class, 'create']],
+    ['POST', '/show/{id}', [Controllers\CommentControllers\CommentCreate::class, 'create']],
 ];
