@@ -1,4 +1,5 @@
 A typical CRUD application example.
+
 Features:
 - Create Article
 - Show articles in list
@@ -10,6 +11,14 @@ Features:
 - Twig
 - Tailwind CSS
 - FastRoute
+
+as of 07.07.2024. new features added:
+- Option to leave a comment (name, comment)
+- Display comments under article
+- Delete comment (its fine that there are no users)
+
+- Comment can be "liked" (right now its fine you can infinite thumbs up the comment)
+- Article can be "liked" (the same rules as above)
 
 Project created as Codelex bootcamp assignment.
 
