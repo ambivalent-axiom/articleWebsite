@@ -1,6 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 
+use Ambax\ArticleWebsite\Exceptions\IncorrectInputException;
 use Ambax\ArticleWebsite\Response;
 use Ambax\ArticleWebsite\RedirectResponse;
 use Twig\Environment;
@@ -37,7 +38,13 @@ switch ($case) {
         break;
     case FastRoute\Dispatcher::FOUND:
         [$controller, $route] = $handler;
-        $items = ($container->get($controller))->$route(...array_values($vars));
+
+        try {
+            $items = ($container->get($controller))->$route(...array_values($vars));
+        } catch (IncorrectInputException $e) {
+            $items = new RedirectResponse('notify', $e->getMessage(), $_SERVER['HTTP_REFERER']);
+        }
+
 
         if ($items instanceof Response) {
             echo $twig->render(

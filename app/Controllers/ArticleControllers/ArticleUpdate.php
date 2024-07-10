@@ -1,10 +1,12 @@
 <?php
 namespace Ambax\ArticleWebsite\Controllers\ArticleControllers;
+use Ambax\ArticleWebsite\Exceptions\IncorrectInputException;
 use Ambax\ArticleWebsite\Models\Article;
 use Ambax\ArticleWebsite\RedirectResponse;
 use Ambax\ArticleWebsite\Response;
 use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices;
 use Psr\Log\LoggerInterface;
+use Respect\Validation\Validator as v;
 
 
 class ArticleUpdate
@@ -26,6 +28,16 @@ class ArticleUpdate
 
     public function update(): RedirectResponse
     {
+        $validate = v::key('id', v::notEmpty()->uuid(4))
+            ->key('category', v::numericVal()->notEmpty()->length(1,1))
+            ->key('title', v::alnum()->notEmpty()->length(1,32))
+            ->key('author', v::alnum()->notEmpty()->length(1,20))
+            ->key('timestamp', v::dateTime()->notEmpty()->length(1,30));
+
+        if( ! $validate->validate($_POST))
+        {
+            throw new IncorrectInputException("Please check the input fields!");
+        }
         $article = new Article(
             $_POST['id'],
             $_POST['category'],
