@@ -26,6 +26,6 @@ class CommentLike
         $comment->like();
         $this->logger->info(__METHOD__ . ' comment ' . $id . ' deleted');
         $this->repository->update($comment);
-        return new RedirectResponse('/redirect', '', '/show/' . $articleId);
+        return new RedirectResponse('/redirect', '', '/show/' . $articleId . '#' . $comment->getId());
     }
 }

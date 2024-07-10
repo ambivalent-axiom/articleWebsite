@@ -2,6 +2,7 @@
 require 'vendor/autoload.php';
 use Ambax\ArticleWebsite\Exceptions\IncorrectInputException;
 use Ambax\ArticleWebsite\Exceptions\ShowToUserException;
+use Ambax\ArticleWebsite\Response;
 use Ambax\ArticleWebsite\RedirectResponse;
 use Twig\Environment;
 use Twig\Extension\CoreExtension;
@@ -43,10 +44,17 @@ switch ($case) {
         } catch (IncorrectInputException|ShowToUserException $e) {
             $items = new RedirectResponse('notify', $e->getMessage(), $_SERVER['HTTP_REFERER']);
         }
-
-        echo $twig->render(
-            $items->getAddress() . '.twig',
-            $items->getData()
-        );
+        if ($items instanceof Response) {
+            echo $twig->render(
+                $items->getAddress() . '.twig',
+                $items->getData()
+            );
+        }
+        if ($items instanceof RedirectResponse) {
+            echo $twig->render(
+                $items->getAddress() . '.twig',
+                $items->getMessage()
+            );
+        }
         break;
 }
