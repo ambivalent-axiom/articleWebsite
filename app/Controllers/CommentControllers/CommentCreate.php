@@ -1,11 +1,13 @@
 <?php
 namespace Ambax\ArticleWebsite\Controllers\CommentControllers;
+use Ambax\ArticleWebsite\Exceptions\IncorrectInputException;
 use Ambax\ArticleWebsite\Models\Comment;
 use Ambax\ArticleWebsite\RedirectResponse;
 use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices;
 use Carbon\Carbon;
 use Psr\Log\LoggerInterface;
 use Ramsey\Uuid\Uuid;
+use Respect\Validation\Validator as v;
 
 class CommentCreate
 {
@@ -16,6 +18,16 @@ class CommentCreate
     }
     public function create(): RedirectResponse
     {
+        $validate = v::key('articleId', v::notEmpty()->uuid(4))
+            ->key('author', v::alnum()->notEmpty()->length(1,20))
+            ->key('email', v::email()->notEmpty()->length(1, 255))
+            ->key('content', v::notEmpty())
+        ;
+
+        if( ! $validate->validate($_POST))
+        {
+            throw new IncorrectInputException("Please check the input fields!");
+        }
         $this->logger->info(__METHOD__ . ' create start');
         $comment = new Comment(
             Uuid::uuid4()->toString(),
