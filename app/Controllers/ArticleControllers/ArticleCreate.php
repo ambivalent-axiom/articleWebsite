@@ -1,11 +1,13 @@
 <?php
 namespace Ambax\ArticleWebsite\Controllers\ArticleControllers;
 use Ambax\ArticleWebsite\Exceptions\IncorrectInputException;
+use Ambax\ArticleWebsite\Exceptions\ShowToUserException;
 use Ambax\ArticleWebsite\Models\Article;
 use Ambax\ArticleWebsite\RedirectResponse;
 use Ambax\ArticleWebsite\Response;
 use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices;
 use Carbon\Carbon;
+use Exception;
 use Psr\Log\LoggerInterface;
 use Ramsey\Uuid\Uuid;
 use Respect\Validation\Validator as v;
@@ -45,7 +47,12 @@ class ArticleCreate
             $_POST['author'],
             Carbon::now()->toDateTimeString()
         );
-        $this->repository->create($article);
+        try {
+            $this->repository->create($article);
+        } catch (Exception $e) {
+            $this->logger->error($e);
+            throw new ShowToUserException("Failed to create article!");
+        }
         return new RedirectResponse('/notify', 'Article created successfully', '/');
     }
 }

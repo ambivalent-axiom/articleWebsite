@@ -3,6 +3,7 @@ namespace Ambax\ArticleWebsite\Services\RepositoryServices;
 use Ambax\ArticleWebsite\Models\Comment;
 use Ambax\ArticleWebsite\Models\Model;
 use Ambax\ArticleWebsite\Repositories\Database;
+use Exception;
 use PDOException;
 use Psr\Log\LoggerInterface;
 
@@ -77,7 +78,7 @@ class CommentRepositoryServices implements CommentRepositoryService
             return true;
         } catch (PDOException $e) {
             $this->logger->info(__METHOD__ . $e->getMessage());
-            return false;
+            throw new Exception($e->getMessage());
         }
 
     }
@@ -89,7 +90,7 @@ class CommentRepositoryServices implements CommentRepositoryService
             return true;
         } catch (PDOException $e) {
             $this->logger->info(__METHOD__ . $e->getMessage());
-            return false;
+            throw new Exception($e->getMessage());
         }
     }
     public function update(Model $comment): bool
@@ -100,7 +101,7 @@ class CommentRepositoryServices implements CommentRepositoryService
             return true;
         } catch (PDOException $e) {
             $this->logger->info(__METHOD__ . $e->getMessage());
-            return false;
+            throw new Exception($e->getMessage());
         }
     }
 }

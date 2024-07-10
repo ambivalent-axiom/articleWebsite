@@ -7,6 +7,7 @@ use Psr\Log\LoggerInterface;
 
 class ArticleLike
 {
+    //TODO implement model like system
     public function __construct(LoggerInterface $logger, ArticleRepositoryServices $repository)
     {
         $this->logger = $logger;

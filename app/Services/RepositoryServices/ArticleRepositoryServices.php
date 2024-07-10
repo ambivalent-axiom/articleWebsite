@@ -3,6 +3,7 @@ namespace Ambax\ArticleWebsite\Services\RepositoryServices;
 use Ambax\ArticleWebsite\Models\Article;
 use Ambax\ArticleWebsite\Models\Model;
 use Ambax\ArticleWebsite\Repositories\Database;
+use Exception;
 use PDOException;
 use Psr\Log\LoggerInterface;
 
@@ -55,7 +56,7 @@ class ArticleRepositoryServices implements ArticleRepositoryService
             return true;
         } catch (PDOException $e) {
             $this->logger->info(__METHOD__ . $e->getMessage());
-            return false;
+            throw new Exception($e->getMessage());
         }
 
     }
@@ -67,7 +68,7 @@ class ArticleRepositoryServices implements ArticleRepositoryService
             return true;
         } catch (PDOException $e) {
             $this->logger->info(__METHOD__ . $e->getMessage());
-            return false;
+            throw new Exception($e->getMessage());
         }
     }
     public function update(Model $article): bool
@@ -78,7 +79,7 @@ class ArticleRepositoryServices implements ArticleRepositoryService
             return true;
         } catch (PDOException $e) {
             $this->logger->info(__METHOD__ . $e->getMessage());
-            return false;
+            throw new Exception($e->getMessage());
         }
     }
 }
