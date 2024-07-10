@@ -5,6 +5,7 @@ use Ambax\ArticleWebsite\Models\Comment;
 use Ambax\ArticleWebsite\RedirectResponse;
 use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices;
 use Carbon\Carbon;
+use Exception;
 use Psr\Log\LoggerInterface;
 use Ramsey\Uuid\Uuid;
 use Respect\Validation\Validator as v;
@@ -21,9 +22,7 @@ class CommentCreate
         $validate = v::key('articleId', v::notEmpty()->uuid(4))
             ->key('author', v::alnum()->notEmpty()->length(1,20))
             ->key('email', v::email()->notEmpty()->length(1, 255))
-            ->key('content', v::notEmpty())
-        ;
-
+            ->key('content', v::notEmpty());
         if( ! $validate->validate($_POST))
         {
             throw new IncorrectInputException("Please check the input fields!");
@@ -37,7 +36,12 @@ class CommentCreate
             $_POST['content'],
             Carbon::now()->toDateTimeString()
         );
-        $this->repository->create($comment);
+        try {
+            $this->repository->create($comment);
+        } catch (Exception $e) {
+            $this->logger->error($e);
+            return new RedirectResponse('/notify', 'Uups, failed to add comment!', '/show/' . $_POST['articleId']);
+        }
         return new RedirectResponse('/notify', 'Comment added successfully', '/show/' . $_POST['articleId']);
     }
 }
