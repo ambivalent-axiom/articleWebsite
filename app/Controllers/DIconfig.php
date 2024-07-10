@@ -2,8 +2,13 @@
 namespace Ambax\ArticleWebsite;
 use Ambax\ArticleWebsite\Repositories\Database;
 use Ambax\ArticleWebsite\Repositories\SQLite;
+use Ambax\ArticleWebsite\Services\LikeService;
+use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
 use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices;
+use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryService;
 use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices;
+use Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryService;
+use Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices;
 use DI\ContainerBuilder;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
@@ -22,13 +27,19 @@ return function()
             return $logger;
         },
         Database::class => create(SQLite::class),
-        ArticleRepositoryServices::class =>
+        LikeService::class => create(LikeService::class),
+        ArticleRepositoryService::class =>
             create(ArticleRepositoryServices::class)->constructor(
                 get(LoggerInterface::class),
                 get(Database::class)
         ),
-        CommentRepositoryServices::class => create(
+        CommentRepositoryService::class => create(
             CommentRepositoryServices::class)->constructor(
+                get(LoggerInterface::class),
+                get(Database::class)
+        ),
+        LikeRepositoryService::class => create(
+            LikeRepositoryServices::class)->constructor(
                 get(LoggerInterface::class),
                 get(Database::class)
         )

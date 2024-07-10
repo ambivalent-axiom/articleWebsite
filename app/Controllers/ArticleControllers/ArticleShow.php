@@ -2,16 +2,16 @@
 namespace Ambax\ArticleWebsite\Controllers\ArticleControllers;
 use Ambax\ArticleWebsite\Exceptions\ShowToUserException;
 use Ambax\ArticleWebsite\Response;
-use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices;
-use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices;
+use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
+use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryService;
 use Exception;
 use Psr\Log\LoggerInterface;
 class ArticleShow
 {
     public function __construct(
         LoggerInterface           $logger,
-        ArticleRepositoryServices $articleRepositoryService,
-        CommentRepositoryServices $commentRepositoryService
+        ArticleRepositoryService $articleRepositoryService,
+        CommentRepositoryService $commentRepositoryService
     )
     {
         $this->logger = $logger;

@@ -2,14 +2,14 @@
 namespace Ambax\ArticleWebsite\Controllers\ArticleControllers;
 use Ambax\ArticleWebsite\Exceptions\ShowToUserException;
 use Ambax\ArticleWebsite\RedirectResponse;
-use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices;
+use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
 use Exception;
 use Psr\Log\LoggerInterface;
 
 
 class ArticleDelete
 {
-    public function __construct(LoggerInterface $logger, ArticleRepositoryServices $repository)
+    public function __construct(LoggerInterface $logger, ArticleRepositoryService $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;

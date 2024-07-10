@@ -68,6 +68,10 @@ class Article implements Model
     {
         return $this->likes;
     }
+    public function setLikes(int $likes)
+    {
+        $this->likes = $likes;
+    }
     public function like()
     {
         $this->likes++;

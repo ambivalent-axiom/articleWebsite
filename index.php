@@ -38,7 +38,6 @@ switch ($case) {
         break;
     case FastRoute\Dispatcher::FOUND:
         [$controller, $route] = $handler;
-
         try {
             $items = ($container->get($controller))->$route(...array_values($vars));
         } catch (IncorrectInputException|ShowToUserException $e) {

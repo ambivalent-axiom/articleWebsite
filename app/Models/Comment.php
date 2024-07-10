@@ -76,6 +76,10 @@ class Comment implements Model
     {
         return $this->likes;
     }
+    public function setLikes(int $likes): void
+    {
+        $this->likes = $likes;
+    }
     public function like(): void
     {
         $this->likes ++;

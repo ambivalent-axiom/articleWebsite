@@ -1,6 +1,5 @@
 <?php
 namespace Ambax\ArticleWebsite\Services\RepositoryServices;
-use Ambax\ArticleWebsite\Models\Comment;
 use Ambax\ArticleWebsite\Models\Like;
 use Ambax\ArticleWebsite\Models\Model;
 use Ambax\ArticleWebsite\Repositories\Database;
@@ -32,7 +31,7 @@ class LikeRepositoryServices implements LikeRepositoryService
     public function fetchAll(string $origin, string $originId): array
     {
         $this->logger->info(__METHOD__ . 'Fetching likes by ' . $origin . ' ID: ' . $originId);
-        $content = $this->db->select('likes', '*', ['origin' => $origin, 'origin_id' => $originId]);
+        $content = $this->db->select('likes', '*', ['like_origin' => $origin, 'like_origin_id' => $originId]);
         $likes = [];
         foreach ($content as $like) {
             $likes[] = new Like(

@@ -5,13 +5,13 @@ use Ambax\ArticleWebsite\Exceptions\ShowToUserException;
 use Ambax\ArticleWebsite\Models\Article;
 use Ambax\ArticleWebsite\RedirectResponse;
 use Ambax\ArticleWebsite\Response;
-use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices;
+use Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryService;
 use Exception;
 use Psr\Log\LoggerInterface;
 use Respect\Validation\Validator as v;
 class ArticleUpdate
 {
-    public function __construct(LoggerInterface $logger, ArticleRepositoryServices $repository)
+    public function __construct(LoggerInterface $logger, ArticleRepositoryService $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;

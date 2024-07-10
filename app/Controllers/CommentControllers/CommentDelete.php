@@ -1,14 +1,14 @@
 <?php
 namespace Ambax\ArticleWebsite\Controllers\CommentControllers;
 use Ambax\ArticleWebsite\RedirectResponse;
-use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices;
+use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryService;
 use Exception;
 use Psr\Log\LoggerInterface;
 
 
 class CommentDelete
 {
-    public function __construct(LoggerInterface $logger, CommentRepositoryServices $repository)
+    public function __construct(LoggerInterface $logger, CommentRepositoryService $repository)
     {
         $this->logger = $logger;
         $this->repository = $repository;

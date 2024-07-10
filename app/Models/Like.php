@@ -22,10 +22,10 @@ class Like implements Model
     public function __invoke()
     {
         return [
-            'id' => $this->id,
-            'originId' => $this->originId,
-            'origin' => $this->origin,
-            'timestamp' => $this->timestamp,
+            'like_id' => $this->id,
+            'like_origin_id' => $this->originId,
+            'like_origin' => $this->origin,
+            'like_timestamp' => $this->timestamp,
         ];
     }
     public function getId()
