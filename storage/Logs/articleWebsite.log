@@ -2650,3 +2650,191 @@
 [2024-07-11T22:07:22.921277+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::update article updated  
 [2024-07-11T22:07:24.237811+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
 [2024-07-11T22:07:24.237878+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:08:37.964313+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:08:47.922283+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:08:47.922347+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:09:53.921142+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:09:53.921205+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:09:53.921442+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:34.903536+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:10:34.930174+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:10:34.930222+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by comment ID: 24448b50-2aa9-4e69-a73f-032d5238fc1a  
+[2024-07-11T22:10:34.930367+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchOneFetching comment ID: 24448b50-2aa9-4e69-a73f-032d5238fc1a  
+[2024-07-11T22:10:34.931869+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::update comment updated  
+[2024-07-11T22:10:34.952430+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:34.952507+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:34.952746+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:37.120480+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:10:37.128749+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:10:37.128796+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by article ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:37.128954+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:37.130350+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::update article updated  
+[2024-07-11T22:10:37.147255+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:37.147316+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:37.147520+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:38.132111+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:10:38.140346+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:10:38.140403+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by article ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:38.140613+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:38.142232+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::update article updated  
+[2024-07-11T22:10:38.159215+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:38.159267+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:38.159455+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:42.872938+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:10:42.881271+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:10:42.881314+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by article ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:42.881468+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:42.882967+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::update article updated  
+[2024-07-11T22:10:42.900113+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:42.900168+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:42.900343+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0  
+[2024-07-11T22:10:44.534277+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:10:44.534342+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:10:46.395459+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:46.395518+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 2b267ca4-8aa0-4375-9e65-bb57609a2084  
+[2024-07-11T22:10:46.395757+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 2b267ca4-8aa0-4375-9e65-bb57609a2084  
+[2024-07-11T22:10:51.595845+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:10:51.604265+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:10:51.604301+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by article ID: 2b267ca4-8aa0-4375-9e65-bb57609a2084  
+[2024-07-11T22:10:51.604411+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 2b267ca4-8aa0-4375-9e65-bb57609a2084  
+[2024-07-11T22:10:51.605772+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::update article updated  
+[2024-07-11T22:10:51.623365+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:51.623424+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 2b267ca4-8aa0-4375-9e65-bb57609a2084  
+[2024-07-11T22:10:51.623631+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 2b267ca4-8aa0-4375-9e65-bb57609a2084  
+[2024-07-11T22:10:53.646566+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:10:53.646631+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:10:55.059837+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:55.059921+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:55.060185+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:56.482720+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:10:56.490933+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:10:56.490974+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:56.491117+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:56.492571+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::update article updated  
+[2024-07-11T22:10:56.512293+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:56.512353+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:56.512551+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:57.243229+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:10:57.251486+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:10:57.251538+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:57.251745+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:57.253314+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::update article updated  
+[2024-07-11T22:10:57.271653+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:57.271706+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:57.271881+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:57.871534+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:10:57.879668+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:10:57.879712+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:57.879821+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:57.881189+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::update article updated  
+[2024-07-11T22:10:57.900038+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:10:57.900089+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:10:57.900264+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:11:00.045770+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:11:00.053987+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:11:00.054028+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by comment ID: e3da3260-034d-4688-bb84-5a8a9e4df003  
+[2024-07-11T22:11:00.054153+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchOneFetching comment ID: e3da3260-034d-4688-bb84-5a8a9e4df003  
+[2024-07-11T22:11:00.055541+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::update comment updated  
+[2024-07-11T22:11:00.075805+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:11:00.075857+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:11:00.076045+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:11:00.641181+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:11:00.649369+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:11:00.649416+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by comment ID: e3da3260-034d-4688-bb84-5a8a9e4df003  
+[2024-07-11T22:11:00.649572+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchOneFetching comment ID: e3da3260-034d-4688-bb84-5a8a9e4df003  
+[2024-07-11T22:11:00.651211+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::update comment updated  
+[2024-07-11T22:11:00.669107+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:11:00.669162+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:11:00.669337+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:11:01.109662+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\LikeControllers\LikeAdd::likelike add start  
+[2024-07-11T22:11:01.117752+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::create like created  
+[2024-07-11T22:11:01.117798+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices::fetchAllFetching likes by comment ID: e3da3260-034d-4688-bb84-5a8a9e4df003  
+[2024-07-11T22:11:01.117952+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchOneFetching comment ID: e3da3260-034d-4688-bb84-5a8a9e4df003  
+[2024-07-11T22:11:01.119417+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::update comment updated  
+[2024-07-11T22:11:01.137825+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:11:01.137882+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:11:01.138078+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 682cac7a-fbea-4e34-8cd7-270422fb8a4f  
+[2024-07-11T22:11:07.065976+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:11:07.066066+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:11:08.343398+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article 84dc8b05-2675-4e6f-97e4-5de3ab1efb8f deleted  
+[2024-07-11T22:11:08.345569+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article 84dc8b05-2675-4e6f-97e4-5de3ab1efb8f deleted  
+[2024-07-11T22:11:09.731051+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:11:09.731122+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:11:10.669442+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article 682cac7a-fbea-4e34-8cd7-270422fb8a4f deleted  
+[2024-07-11T22:11:10.676989+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article 682cac7a-fbea-4e34-8cd7-270422fb8a4f deleted  
+[2024-07-11T22:11:11.885182+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:11:11.885268+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:11:12.492237+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article 2b267ca4-8aa0-4375-9e65-bb57609a2084 deleted  
+[2024-07-11T22:11:12.499707+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article 2b267ca4-8aa0-4375-9e65-bb57609a2084 deleted  
+[2024-07-11T22:11:13.142428+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:11:13.142555+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:11:14.159547+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0 deleted  
+[2024-07-11T22:11:14.167369+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article a2bbe314-20e6-4dc1-805f-6a5c33b6c9f0 deleted  
+[2024-07-11T22:11:15.085387+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:11:15.085452+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:11:17.023604+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:11:38.267509+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:11:46.057349+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::create create start  
+[2024-07-11T22:11:46.059848+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::create article created  
+[2024-07-11T22:11:47.391790+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:11:47.391856+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:11:50.163029+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article 7f23e708-bc53-4fa0-a700-0f4e6b120e33 deleted  
+[2024-07-11T22:11:50.170312+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article 7f23e708-bc53-4fa0-a700-0f4e6b120e33 deleted  
+[2024-07-11T22:11:51.143364+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:11:51.143435+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:11:52.323395+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:12:17.762025+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:12:22.573856+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:12:22.573920+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:12:24.711795+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:14:32.934520+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:14:58.495019+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::create create start  
+[2024-07-11T22:14:58.497664+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::create article created  
+[2024-07-11T22:14:59.531911+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:14:59.531972+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:15:01.910774+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleShow::show show one article start  
+[2024-07-11T22:15:01.910846+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchOneFetching article by ID: 5050ffa4-dec9-4000-a542-21bf3cc88081  
+[2024-07-11T22:15:01.911090+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices::fetchAllByArticleFetching comment by article ID: 5050ffa4-dec9-4000-a542-21bf3cc88081  
+[2024-07-11T22:15:04.667506+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:15:04.667586+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:15:06.232400+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:15:16.045109+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::create create start  
+[2024-07-11T22:15:16.047693+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::create article created  
+[2024-07-11T22:15:17.117624+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:15:17.117707+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:15:18.742443+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:15:24.246073+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::create create start  
+[2024-07-11T22:15:24.248522+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::create article created  
+[2024-07-11T22:15:25.385132+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:15:25.385192+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:15:28.550531+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:15:37.369934+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:18:42.062032+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::create create start  
+[2024-07-11T22:18:42.064568+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::create article created  
+[2024-07-11T22:18:43.106798+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:18:43.106871+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:19:02.811939+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::index index start  
+[2024-07-11T22:19:15.636024+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleCreate::create create start  
+[2024-07-11T22:19:15.638309+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::create article created  
+[2024-07-11T22:19:16.646744+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:19:16.646808+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:19:49.424926+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article 0488e1f0-c7d9-4562-ad45-cd1e565fa001 deleted  
+[2024-07-11T22:19:49.432523+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article 0488e1f0-c7d9-4562-ad45-cd1e565fa001 deleted  
+[2024-07-11T22:19:50.345378+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:19:50.345492+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:19:51.104537+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article 24a4e3b3-6a64-4868-8e7d-5c50d7b35f89 deleted  
+[2024-07-11T22:19:51.112076+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article 24a4e3b3-6a64-4868-8e7d-5c50d7b35f89 deleted  
+[2024-07-11T22:19:51.782867+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:19:51.782967+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:19:52.777098+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article 081553d3-50a9-4b8d-9da2-e069ee154ed5 deleted  
+[2024-07-11T22:19:52.784720+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article 081553d3-50a9-4b8d-9da2-e069ee154ed5 deleted  
+[2024-07-11T22:19:53.351771+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:19:53.351836+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:19:53.906272+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article a7b11dc0-e661-406d-aba3-8ab917ff7775 deleted  
+[2024-07-11T22:19:53.913704+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article a7b11dc0-e661-406d-aba3-8ab917ff7775 deleted  
+[2024-07-11T22:19:54.483398+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:19:54.483457+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  
+[2024-07-11T22:19:55.053674+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleDelete::delete article 5050ffa4-dec9-4000-a542-21bf3cc88081 deleted  
+[2024-07-11T22:19:55.061138+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::delete article 5050ffa4-dec9-4000-a542-21bf3cc88081 deleted  
+[2024-07-11T22:19:55.702212+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Controllers\ArticleControllers\ArticleIndex::index index started  
+[2024-07-11T22:19:55.702297+03:00] articleWebsite.INFO: Ambax\ArticleWebsite\Services\RepositoryServices\ArticleRepositoryServices::fetchAllFetching articles...  

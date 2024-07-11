@@ -30,8 +30,8 @@ class ArticleCreate
     public function create(): RedirectResponse
     {
         $validate = v::key('category', v::numericVal()->notEmpty()->length(1,1))
-            ->key('title', v::alnum()->notEmpty()->length(1,32))
-            ->key('content', v::alnum()->notEmpty())
+            ->key('title', v::alnum(' ')->notEmpty()->length(1,32))
+            ->key('content', v::notEmpty())
             ->key('author', v::alnum()->notEmpty()->length(1,20));
 
         if( ! $validate->validate($_POST))
