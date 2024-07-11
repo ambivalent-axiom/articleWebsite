@@ -10,6 +10,7 @@ use Ambax\ArticleWebsite\Services\RepositoryServices\CommentRepositoryServices;
 use Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryService;
 use Ambax\ArticleWebsite\Services\RepositoryServices\LikeRepositoryServices;
 use DI\ContainerBuilder;
+use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Psr\Log\LoggerInterface;
@@ -23,7 +24,15 @@ return function()
         LoggerInterface::class => function(): LoggerInterface 
         {
             $logger = new Logger('articleWebsite');
-            $logger->pushHandler(new StreamHandler('storage/Logs/articleWebsite.log', Logger::DEBUG));
+            $formatter = new LineFormatter(
+                null,
+                null,
+                false,
+                true
+            );
+            $streamHandler  = new StreamHandler('storage/Logs/articleWebsite.log', Logger::DEBUG);
+            $streamHandler->setFormatter($formatter);
+            $logger->pushHandler($streamHandler);
             return $logger;
         },
         Database::class => create(SQLite::class),

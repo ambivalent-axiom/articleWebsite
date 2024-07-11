@@ -10,6 +10,7 @@
             <div class="m-2 p-6 bg-slate-400 rounded-md flex">
                 <form action="\update" method="post" enctype="multipart/form-data">
                     <div class="flex flex-col">
+                        <input type="hidden" name="__method" value="PUT" readonly>
                         <div class="p-2 text-start">
                             <label for="id">Article ID:
                                 <input class="rounded-md bg-slate-400 w-80" type="text" name="id" value="{{ article.id }}" readonly>

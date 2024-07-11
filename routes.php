@@ -8,7 +8,7 @@ return [
     ['GET', '/update/{id}', [Controllers\ArticleControllers\ArticleUpdate::class, 'index']],
     ['GET', '/comment/delete/{id}', [Controllers\CommentControllers\CommentDelete::class, 'delete']],
     ['GET', '/{origin}/like/{id}', [Controllers\LikeControllers\LikeAdd::class, 'like']],
-    ['POST', '/update', [Controllers\ArticleControllers\ArticleUpdate::class, 'update']],
+    ['PUT', '/update', [Controllers\ArticleControllers\ArticleUpdate::class, 'update']],
     ['POST', '/create', [Controllers\ArticleControllers\ArticleCreate::class, 'create']],
     ['POST', '/show/{id}', [Controllers\CommentControllers\CommentCreate::class, 'create']],
 ];
